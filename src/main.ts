@@ -1,7 +1,9 @@
 import "@/main.css"
+import { render, loadGlobalVariables } from "@@/lib/loaders"
+import HelloWorld from "@/components/HelloWorld.jon"
 
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-  <div class="hello_world">
-   hello world
-  </div>
-`
+
+loadGlobalVariables()
+
+// render
+render(HelloWorld, document.querySelector<HTMLDivElement>("#app")!)

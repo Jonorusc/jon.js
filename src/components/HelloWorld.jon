@@ -1,0 +1,46 @@
+<component>
+  <template>
+    <div class="hello_world">
+      <h1>Hello World</h1>
+      <span>Counter: {{ count }}</span>
+      <button id="incrementBtn">Increment</button>
+      <button id="decrementBtn">Decrement</button>
+    </div>
+  </template>
+
+  <script>
+    console.log('script executed');
+    
+    // Define the reactive data function
+    const { $reactive, $onMounted } = window;
+
+    const state = $reactive({
+      count: 0
+    });
+
+
+    $onMounted(() => {
+      console.log('Component mounted');
+
+      document.getElementById('incrementBtn').addEventListener('click', () => {
+        state.count++;
+      });
+
+      document.getElementById('decrementBtn').addEventListener('click', () => {
+        state.count--;
+      });
+    });
+  </script>
+  <style>
+    span {
+      color: blue;
+    }
+    button {
+      margin: 5px;
+      padding: 10px;
+      background-color: lightblue;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</component>

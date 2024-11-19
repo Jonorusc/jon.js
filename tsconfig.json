@@ -29,5 +29,5 @@
       "composables/*": ["src/composables/*"]
     }
   },
-  "include": ["src", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.css", "src/**/*.html"],
+  "include": ["src", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.css", "src/**/*.html", "src/types/**/*.ts", "lib/*.ts"],
 }
